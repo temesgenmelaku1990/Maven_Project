@@ -22,10 +22,10 @@
   </modules>
 
   <distributionManagement>
-    <repository>
-      <id>jenkins-pipeline-example1</id>
-      <url>file://C:/Users/User PC/AppData/Local/Jenkins/.jenkins/workspace/jenkins-pipeline-example1</url>
-    </repository>
+    <shapshotRepository>
+      <id>staging env</id>
+      <url>file://${project.build.directory}/staging/</url>
+    </shapshotRepository>
   </distributionManagement>
 
   <build>
