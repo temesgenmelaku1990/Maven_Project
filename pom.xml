@@ -56,7 +56,7 @@
    <repository>
      <id>github</id>
      <name>GitHub amitha-vikraman Apache Maven Packages</name>
-     <url>https://maven.pkg.github.com/amitha-vikraman/https://github.com/amitha-vikraman/Maven_Project</url>
+     <url>https://maven.pkg.github.com/amitha-vikraman/Maven_Project</url>
    </repository>
 </distributionManagement>
 
