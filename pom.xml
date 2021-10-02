@@ -20,13 +20,45 @@
     <module>server</module>
     <module>webapp</module>
   </modules>
+          <activeProfiles>
+    <activeProfile>github</activeProfile>
+  </activeProfiles>
 
-  <distributionManagement>
-    <shapshotRepository>
-      <id>staging env</id>
-      <url>file://${project.build.directory}/staging/</url>
-    </shapshotRepository>
-  </distributionManagement>
+  <profiles>
+    <profile>
+      <id>github</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/amitha-vikraman/*</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <servers>
+    <server>
+      <id>github</id>
+      <username>amitha-vikraman</username>
+      <password>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</password>
+    </server>
+  </servers>
+</settings>
+
+<distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub amitha-vikraman Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/amitha-vikraman/https://github.com/amitha-vikraman/Maven_Project</url>
+   </repository>
+</distributionManagement>
 
   <build>
     <plugins>
